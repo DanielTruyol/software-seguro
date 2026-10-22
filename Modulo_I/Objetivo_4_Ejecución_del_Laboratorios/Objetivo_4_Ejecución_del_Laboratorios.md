@@ -1,4 +1,4 @@
-# Objetivo 4: Ejecución del Laboratorios
+# Objetivo 4: Ejecución de Laboratorios
 
 ## Apagar la IA
     
