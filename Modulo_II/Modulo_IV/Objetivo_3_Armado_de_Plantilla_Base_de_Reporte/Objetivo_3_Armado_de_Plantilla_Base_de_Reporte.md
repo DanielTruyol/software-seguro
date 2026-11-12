@@ -18,13 +18,8 @@ Como pentester, tu entregable final es el reporte. Diseña y personaliza tu prop
   * **Endpoint / Componente afectado:** URL exacta, parámetro vulnerable o librería comprometida.
 
 ### Métricas CVSS
-* **Descripción:** Evaluación estandarizada del riesgo mediante el vector y la puntuación **CVSS v3.1 / v4.0**. Desglosa métricas clave como:
-  * **Vector de Ataque (AV):** Red, Adyacente, Local, Físico.
-  * **Complejidad de Ataque (AC):** Baja o Alta.
-  * **Privilegios Requeridos (PR):** Ninguno, Bajos, Altos.
-  * **Interacción del Usuario (UI):** Ninguna o Requerida.
-  * **Alcance (S):** Cambiado o Sin Cambios.
-  * **Impacto:** Confidencialidad (C), Integridad (I) y Disponibilidad (A).
+* **Score:** Calculadora para el Score.
+* **Check:** Modulo ASVS.
 
 ### Prueba de Concepto (PoC)
 * **Descripción:** Demostración práctica y replicable que comprueba la existencia real de la vulnerabilidad. Incluye peticiones HTTP/HTTPS (Headers, Payloads, Responses), capturas de pantalla, scripts exploit y comandos ejecutados.
