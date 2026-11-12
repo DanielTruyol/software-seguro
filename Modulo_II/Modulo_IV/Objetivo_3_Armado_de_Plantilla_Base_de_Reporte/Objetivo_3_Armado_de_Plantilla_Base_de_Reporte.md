@@ -1,6 +1,3 @@
-Objetivo 3: Armado de Plantilla Base de Reporte
-Como pentester, tu entregable final es el reporte. Diseña y personaliza tu propia plantilla de reporte profesional. Esta será la herramienta que utilizarás en el resto del curso y en tu vida profesional. La plantilla debe contener obligatoriamente las siguientes secciones: Resumen Ejecutivo (para directivos), Detalles Técnicos, Métricas CVSS, Prueba de Concepto (PoC) detallada paso a paso, y Recomendaciones de Remediación. Explicar la estructura de la plantilla y que valor genera al usuario final que lee un ticket realizado con dicha plantilla. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 3: Armado de Plantilla Base de Reporte
 
 ## Estructura de la Plantilla Base de Reporte
