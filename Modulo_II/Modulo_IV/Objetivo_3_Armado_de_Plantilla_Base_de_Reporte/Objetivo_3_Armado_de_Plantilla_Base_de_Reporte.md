@@ -3,27 +3,44 @@ Como pentester, tu entregable final es el reporte. Diseña y personaliza tu prop
 
 # Objetivo 3: Armado de Plantilla Base de Reporte
 
-# Informe Técnico: Plantilla Base de Reporte de Auditoría de Seguridad
+## Estructura de la Plantilla Base de Reporte
 
-## 1. Introducción
-En el ejercicio del hacking ético y las auditorías de seguridad, el informe final es el único entregable tangible que recibe el cliente o el equipo de desarrollo. Una plantilla estandarizada y profesional garantiza que los hallazgos se comuniquen con claridad, permitiendo a los directivos dimensionar el riesgo de negocio y a los desarrolladores replicar y solucionar las vulnerabilidades de manera eficiente.
+![Plantilla](plantilla.png)
 
----
-
-## 2. Estructura de la Plantilla Base de Reporte
-
-A continuación se detalla la estructura oficial de la plantilla diseñada para las auditorías de seguridad, junto con una explicación de su contenido y el valor que aporta a cada perfil receptor.
-
-### A. Resumen Ejecutivo (Executive Summary)
+### Resumen Ejecutivo
 * **Descripción:** Sección orientada a gerentes, directores y C-level. Explica en lenguaje de negocio (sin tecnicismos excesivos) el estado general de la seguridad de la aplicación, el impacto potencial de los hallazgos críticos y un resumen métrico del riesgo global.
 * **Valor generado:** Permite a los directivos tomar decisiones informadas sobre la asignación de presupuestos y recursos para la mitigación de riesgos sin necesidad de leer detalles de código fuente.
 
-### B. Detalles Técnicos (Technical Details)
+### Detalles Técnicos
 * **Descripción:** Apartado riguroso que documenta la naturaleza técnica de cada hallazgo. Incluye:
   * **Título descriptivo y Severidad** (Crítica, Alta, Media, Baja).
   * **Clasificación asociada:** Identificadores **CWE** (debilidad de código) y **CVE** (si aplica a componentes de terceros).
   * **Endpoint / Componente afectado:** URL exacta, parámetro vulnerable o librería comprometida.
-* **Valor generado:** Proporciona a los ingenieros y desarrolladores el contexto exacto del fallo para comprender por qué la arquitectura o el código son vulnerables.
 
-### C. Métricas CVSS (Common Vulnerability Scoring System)
-* **Descripción:** Evaluación estandarizada del riesgo mediante el vector y la puntuación **CVSS v3.1 / v4.0**. Desglosa métricas como Vector de Ataque (AV), Complejidad (AC), Privilegios Requeridos (PR), Interacción de Usuario (UI
+### Métricas CVSS
+* **Descripción:** Evaluación estandarizada del riesgo mediante el vector y la puntuación **CVSS v3.1 / v4.0**. Desglosa métricas clave como:
+  * **Vector de Ataque (AV):** Red, Adyacente, Local, Físico.
+  * **Complejidad de Ataque (AC):** Baja o Alta.
+  * **Privilegios Requeridos (PR):** Ninguno, Bajos, Altos.
+  * **Interacción del Usuario (UI):** Ninguna o Requerida.
+  * **Alcance (S):** Cambiado o Sin Cambios.
+  * **Impacto:** Confidencialidad (C), Integridad (I) y Disponibilidad (A).
+
+### Prueba de Concepto (PoC)
+* **Descripción:** Demostración práctica y replicable que comprueba la existencia real de la vulnerabilidad. Incluye peticiones HTTP/HTTPS (Headers, Payloads, Responses), capturas de pantalla, scripts exploit y comandos ejecutados.
+
+### Recomendaciones de Remediación
+* **Descripción:** Soluciones técnicas y mejores prácticas ajustadas al lenguaje de programación o arquitectura evaluada. Incluye fragmentos de código corregido, parches de actualización y configuraciones de seguridad defensiva.
+
+---
+
+## Valor Generado al Usuario Final y Equipos de Trabajo
+
+La utilización de esta plantilla para la confección de informes y tickets aporta un valor estratégico diferenciado a los distintos actores de la organización:
+
+| Perfil / Receptor | Beneficio y Valor Clave Generado |
+| :--- | :--- |
+| **C-Level / CISOs / Gerencia** | **Visibilidad del riesgo de negocio:** Permite justificar inversiones en ciberseguridad, priorizar recursos y evaluar el cumplimiento regulatorio (p. ej. ISO 27001, PCI-DSS, GDPR). |
+| **Líderes Técnicos / PMs** | **Priorización del Backlog:** Facilita la asignación eficiente de tareas según la severidad CVSS y el impacto operacional. |
+| **Desarrolladores / DevSecOps** | **Aceleración del parcheo:** Al contar con PoCs claros y código de remediación sugerido, evitan perder tiempo adivinando cómo reproducir o solucionar el problema. |
+| **QA / Tester de Software** | **Validación de corrección (Re-testing):** Proporciona un procedimiento inequívoco para verificar que la vulnerabilidad ha sido subsanada de forma efectiva. |

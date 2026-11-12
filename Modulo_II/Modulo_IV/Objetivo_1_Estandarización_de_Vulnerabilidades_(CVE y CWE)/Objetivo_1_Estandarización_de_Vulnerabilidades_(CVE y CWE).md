@@ -1,6 +1,3 @@
-Objetivo 1: Estandarización de Vulnerabilidades (CVE y CWE)
-En la industria, las vulnerabilidades deben hablar un idioma universal. Investiga y redacta un informe breve explicando qué es un CVE (Common Vulnerabilities and Exposures) y qué es el catálogo CWE (Common Weakness Enumeration), marcando la diferencia entre ambos. Menciona quiénes son las autoridades que asignan los CVE (CNAs), dónde se consultan públicamente, y nombra al menos dos herramientas automatizadas de la industria que se utilizan para detectar vulnerabilidades con CVEs asignados. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 1: Estandarización de Vulnerabilidades (CVE y CWE)
 
 # Informe Técnico: Estandarización de Vulnerabilidades (CVE y CWE)

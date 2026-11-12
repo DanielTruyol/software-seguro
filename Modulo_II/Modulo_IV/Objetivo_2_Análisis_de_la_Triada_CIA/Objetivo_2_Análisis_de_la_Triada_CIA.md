@@ -1,6 +1,3 @@
-Objetivo 2: Análisis de la Triada CIA
-La seguridad de la información se sostiene sobre tres pilares fundamentales: Confidencialidad, Integridad y Disponibilidad (CIA). Explica con tus propias palabras cada uno de estos pilares. Luego, da un ejemplo concreto de una vulnerabilidad web (o un tipo de ataque) que comprometa principal y directamente a cada pilar por separado. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 2: Análisis de la Triada CIA
 
 # Informe Técnico: Análisis de la Triada CIA
