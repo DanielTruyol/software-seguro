@@ -1,6 +1,3 @@
-Objetivo 1: El Arte de la Inyección Ciega (Blind SQLi)
-No todas las aplicaciones devuelven errores amigables en pantalla. Investiga y explica con tus propias palabras la diferencia técnica entre una inyección Boolean-Based Blind (basada en booleanos/verdadero-falso) y una inyección Time-Based Blind (basada en tiempo). ¿Cómo logra un atacante extraer el nombre de una base de datos letra por letra cuando la aplicación solo responde con una pantalla genérica de "Cargando..."? Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 1: El Arte de la Inyección Ciega (Blind SQLi)
 
 ## 1. Introducción a la Inyección SQL Ciega

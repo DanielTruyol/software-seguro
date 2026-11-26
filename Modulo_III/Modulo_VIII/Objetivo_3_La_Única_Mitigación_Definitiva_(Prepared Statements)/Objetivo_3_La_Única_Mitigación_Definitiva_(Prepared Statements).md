@@ -1,6 +1,3 @@
-Objetivo 3: La Única Mitigación Definitiva (Prepared Statements)
-Muchos desarrolladores intentan parchear las inyecciones SQL creando "listas negras" (bloqueando palabras como SELECT o UNION) o escapando comillas simples. Esto es ineficiente y evadible. Investiga y explica técnicamente cómo funciona una Consulta Parametrizada (Prepared Statement) a nivel de arquitectura, y por qué esta técnica neutraliza por completo cualquier intento de inyección, sin importar qué caracteres envíe el usuario. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 3: La Única Mitigación Definitiva (Prepared Statements)
 
 ## 1. El Fracaso de los Parches Defensivos Insuficientes

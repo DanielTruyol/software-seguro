@@ -1,7 +1,3 @@
-
-Objetivo 2: Automatización vs Explotación Manual (sqlmap)
-sqlmap es la herramienta de explotación de inyecciones SQL más potente del mercado, pero depender exclusivamente de ella es un error de novatos. Enumera y explica al menos dos escenarios técnicos del mundo real donde sqlmap fallaría estrepitosamente, pero un atacante manual (o un pentester experimentado manipulando la petición en Burp Suite) sí lograría explotar la vulnerabilidad. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 2: Automatización vs Explotación Manual (sqlmap)
 
 ## 1. Introducción
@@ -86,51 +82,6 @@ Un pentester experimentado supera esta barrera utilizando el entorno extensible 
    * Configura `sqlmap` para canalizar todas sus peticiones a través del proxy local de Burp Suite (`--proxy=http://127.0.0.1:8080`).
    * Cada vez que `sqlmap` envía un payload de prueba, la extensión de Burp intercepta la petición saliente, extrae el nuevo cuerpo con el payload SQLi, recalcula el `X-Signature` válido en tiempo real con el timestamp actual y reenvía la petición al servidor.
    * El servidor valida el HMAC correctamente, permite que la petición alcance la base de datos vulnerable y la inyección es explotada exitosamente.
-
----
-
-## 4. Escenario 3 (Bonus): Sanitización con Filtros Basados en Contexto y Evasión Personalizada (*Custom WAF / Nested JSON*)
-
-### Descripción Técnica del Escenario
-
-Determinadas aplicaciones procesan entradas JSON altamente anidadas o utilizan serialización propietaria (como Protobuf o GraphQL). Además, pueden contar con un filtro básico que bloquea palabras clave SQL estándar como `SELECT`, `UNION`, `SLEEP` o espacios en blanco.
-
-```json
-{
-  "filter": {
-    "query": {
-      "conditions": [
-        "user_id = 1001 /*custom_comment*/ UNION/**/SELECT/**/null,group_concat(table_name)/**/FROM/**/information_schema.tables"
-      ]
-    }
-  }
-}
-```
-
-### Por Qué `sqlmap` Falla
-
-1. **Interpretación Estructural Errónea:** `sqlmap` puede no identificar los puntos de inyección si la estructura del cuerpo es un JSON complejo anidado con arreglos mixtos, a menos que se marque explícitamente cada punto con un asterisco (`*`).
-2. **Falsos Positivos de Cierre de Pruebas:** Ante respuestas inusuales del WAF (como un corte abrupto de conexión `TCP RST` en lugar de una respuesta HTTP `403`), `sqlmap` suele asumir que el destino no está disponible o que el parámetro no es inyectable, abortando la fase de detección.
-
-### Explotación Manual (Burp Suite)
-
-El auditor analiza manualmente el comportamiento del filtro enviando solicitudes a través de **Burp Repeater**:
-
-1. **Aislación de la Regla del WAF:** Determina exactamente qué término dispara el bloqueo (por ejemplo, descubre que el WAF bloquea espacios y la palabra `UNION SELECT`, pero permite la concatenación con comentarios en línea `/**/` o el uso de sintaxis alternativa como `UNION DISTINCT`).
-2. **Construcción Manual del Payload:** Diseña a mano un payload adaptado al motor SQL y al parser del backend que evade el filtro específico de la aplicación.
-3. **Explotación Controlada:** Utiliza Burp Intruder o scripts de automatización a medida para volcar la información respetando las limitaciones exactas del entorno vulnerable.
-
----
-
-## 5. Matriz Comparativa: `sqlmap` vs. Explotación Manual
-
-| Criterio | `sqlmap` (Automatizado) | Explotación Manual (Burp Suite / Scripts) |
-| :--- | :--- | :--- |
-| **Velocidad de Volcado** | **Extremadamente Alta** (cuando el escenario es estándar). | **Lenta / Moderada** (requiere construcción manual). |
-| **Flujos de Trabajo Multietapa** | **Baja** (dificultad para mantener estados dinámicos). | **Alta** (control total sobre la secuencia de peticiones). |
-| **Cabeceras Criptográficas (HMAC/Nonce)** | **Muy Baja** (falla sin proxies o Tampers complejos). | **Alta** (vía extensiones de Burp / *Hooking*). |
-| **Evasión de WAFs Propietarios** | **Media** (limitado a scripts tamper predefinidos). | **Alta** (diseño del payload adaptado al parser). |
-| **Inyección de Segunda Orden Complex** | **Limitada** (requiere rutas estáticas y conocidas). | **Alta** (mapeo contextual del comportamiento del sistema). |
 
 ---
 
