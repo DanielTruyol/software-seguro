@@ -1,6 +1,3 @@
-Objetivo 4: El Punto Ciego de los Escáneres Automatizados
-Mientras que herramientas como Nessus, Acunetix o el escáner activo de Burp Suite son excelentes encontrando fallas técnicas (como un XSS o configuraciones inseguras), suelen fracasar rotundamente al buscar fallas lógicas. Explica brevemente por qué la lógica de negocio es el mayor "punto ciego" de la automatización y por qué la auditoría manual es indispensable en esta etapa. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 4: El Punto Ciego de los Escáneres Automatizados
 
 ## 1. Introducción

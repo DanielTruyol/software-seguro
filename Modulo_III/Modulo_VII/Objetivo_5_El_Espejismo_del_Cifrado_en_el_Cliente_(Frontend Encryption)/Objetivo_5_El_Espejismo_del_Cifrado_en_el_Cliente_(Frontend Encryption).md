@@ -1,6 +1,3 @@
-Objetivo 5: El Espejismo del Cifrado en el Cliente (Frontend Encryption)
-El equipo de desarrollo de una aplicación financiera implementa un mecanismo donde todo el cuerpo (body) de las peticiones POST y los parámetros sensibles se cifran mediante JavaScript en el navegador del usuario antes de ser enviados al backend. Los arquitectos del sistema afirman que, gracias a esto, es imposible que un atacante intercepte y manipule los valores utilizando un proxy como Burp Suite, ya que todo viaja encriptado. Analiza este escenario de arquitectura y explica detalladamente por qué esta afirmación es una falsa sensación de seguridad. ¿Dónde reside el fallo fundamental de diseño y cuáles serían los pasos tácticos que realizaría un atacante para evadir esta protección, leer los datos y enviar valores manipulados al servidor? Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 5: El Espejismo del Cifrado en el Cliente (Frontend Encryption)
 
 ## 1. Resumen del Escenario
