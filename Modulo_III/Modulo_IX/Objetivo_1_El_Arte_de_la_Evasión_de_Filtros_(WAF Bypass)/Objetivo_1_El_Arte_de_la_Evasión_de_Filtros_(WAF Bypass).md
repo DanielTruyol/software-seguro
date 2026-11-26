@@ -1,6 +1,3 @@
-Objetivo 1: El Arte de la Evasión de Filtros (WAF Bypass)
-Un desarrollador inexperto intenta bloquear ataques XSS creando un filtro que elimina automáticamente las etiquetas <script> y </script> de los comentarios de los usuarios. Explica técnicamente por qué esta defensa es inútil y proporciona al menos dos (2) payloads diferentes en HTML/JS que lograrían ejecutar código sin utilizar la etiqueta <script>. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 1: El Arte de la Evasión de Filtros (WAF Bypass)
 
 ## 1. Introducción y Análisis del Filtro Naive
@@ -62,7 +59,7 @@ A continuación se presentan vectores de prueba de concepto legítimos utilizado
 
 * **Explicación Técnica:** Los elementos `<svg>` son procesados por el parser HTML/XML del navegador. A diferencia de otros elementos que requieren interacción del usuario o fallos de carga, la etiqueta `<svg>` ejecuta el manejador `onload` tan pronto como el elemento es parseado e incorporado al DOM.
 
-### Vector 3 (Bonus): Manipulación de Enlaces mediante Pseudoprotocolos (`<a>`)
+### Vector 3: Manipulación de Enlaces mediante Pseudoprotocolos (`<a>`)
 
 ```html
 <a href="javascript:alert(1)">Haga clic aquí</a>

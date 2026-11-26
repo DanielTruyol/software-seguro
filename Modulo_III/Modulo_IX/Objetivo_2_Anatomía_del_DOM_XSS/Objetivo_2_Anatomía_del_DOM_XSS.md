@@ -1,6 +1,3 @@
-Objetivo 2: Anatomía del DOM XSS
-A diferencia del XSS Almacenado y Reflejado, el DOM-Based XSS es indetectable para muchos sistemas de prevención de intrusos (IPS) y firewalls (WAF). Investiga y explica por qué ocurre esto (Pista: analiza cómo manejan los navegadores el fragmento # en una URL y qué sucede cuando el código JavaScript procesa entradas como location.hash de forma insegura Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 2: Anatomía del DOM XSS
 
 ## 1. Resumen del Escenario

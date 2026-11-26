@@ -1,6 +1,3 @@
-Objetivo 3: Defensa en Profundidad (Encoding y CSP)
-Explica cómo un arquitecto de seguridad puede mitigar definitivamente el riesgo de XSS implementando dos capas de defensa: 1) Output Encoding (Codificación de Salida) a nivel de código, y 2) Una política de Content Security Policy (CSP) a nivel de cabeceras HTTP. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 3: Defensa en Profundidad (Encoding y CSP)
 
 ## 1. El Principio de Defensa en Profundidad frente a XSS
