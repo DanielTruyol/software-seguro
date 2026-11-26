@@ -1,6 +1,3 @@
-Objetivo 3: XSS vs CSRF
-Ambos ataques involucran al navegador de la víctima y ambos buscan afectar su cuenta, pero sus mecánicas son opuestas. Redacta una comparación técnica directa explicando la diferencia fundamental entre un Cross-Site Scripting (XSS) y un Cross-Site Request Forgery (CSRF). Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 3: XSS vs CSRF - Comparativa Técnica Directa
 
 ## 1. La Diferencia Fundamental: El Modelo de Confianza

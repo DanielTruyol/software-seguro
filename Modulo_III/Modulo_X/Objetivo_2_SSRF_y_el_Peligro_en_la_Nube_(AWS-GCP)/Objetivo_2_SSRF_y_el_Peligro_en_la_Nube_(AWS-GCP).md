@@ -1,6 +1,3 @@
-Objetivo 2: SSRF y el Peligro en la Nube (AWS/GCP)
-En infraestructuras Cloud, una vulnerabilidad de Server-Side Request Forgery (SSRF) suele ser catastrófica. Investiga y explica qué sucede si un atacante encuentra un SSRF en una aplicación alojada en Amazon Web Services (AWS) y fuerza al servidor a hacer una petición GET a la dirección mágica 169.254.169.254. ¿Qué tipo de información altamente sensible espera extraer el atacante? Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 2: SSRF y el Peligro en la Nube (AWS/GCP)
 
 ## 1. Concepto Fundamental de SSRF (Server-Side Request Forgery)

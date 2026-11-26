@@ -1,6 +1,3 @@
-Objetivo 1: Anatomía de un Ataque CSRF (Cross-Site Request Forgery)
-Explica el flujo exacto de un ataque CSRF exitoso. Detalla por qué ocurre este fallo de seguridad (haciendo énfasis en el comportamiento automático de los navegadores con las cookies) y cómo el atributo de cookie SameSite (y sus valores Lax y Strict) ayuda a mitigar radicalmente este vector. Formato de entrega: Enlace al archivo .md.
-
 # Objetivo 1: Anatomía de un Ataque CSRF (Cross-Site Request Forgery)
 
 ## 1. Resumen y Concepto Fundamental
